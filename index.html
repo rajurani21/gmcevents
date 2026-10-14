@@ -4,12 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GMC EVENTS offers flower decoration, cloth decoration, event lighting, DJ and sound services for weddings, engagements, birthdays and special occasions.">
 <title>GMC EVENTS | Make Every Moment Grand</title>
+
 <style>
 :root {
   --gold: #e9c783;
   --dark: #17121c;
   --cream: #fff8ef;
+  --green: #25d366;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -32,9 +35,18 @@ header {
   z-index: 10;
   border-bottom: 1px solid #ffffff20;
 }
-.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
 .logo span { color: var(--gold); }
-nav { display: flex; gap: 24px; flex-wrap: wrap; }
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 nav a:hover { color: var(--gold); }
 .btn {
   display: inline-block;
@@ -45,7 +57,17 @@ nav a:hover { color: var(--gold); }
   font-weight: bold;
   border: 0;
   cursor: pointer;
+  font: inherit;
+  text-align: center;
 }
+.btn:hover { background: #f5dca5; }
+.btn-outline {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  padding: 13px 22px;
+  border-radius: 4px;
+}
+.btn-outline:hover { background: #ffffff15; }
 .hero {
   min-height: 650px;
   display: flex;
@@ -71,17 +93,35 @@ h1 {
   margin: 22px 0;
 }
 h1 span { color: var(--gold); font-style: italic; }
-.hero p { font-size: 18px; line-height: 1.8; color: #e5dce6; }
-.actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
-.btn-outline { border: 1px solid var(--gold); padding: 13px 22px; border-radius: 4px; }
+.hero p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e5dce6;
+}
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
 section { padding: 85px 7%; }
 .heading { max-width: 650px; margin-bottom: 35px; }
-.heading small { color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
-h2 { font: normal clamp(32px, 5vw, 53px)/1.15 Georgia,serif; margin: 12px 0; }
-.heading p, .about p { color: #c8bdca; line-height: 1.8; }
+.heading small {
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+h2 {
+  font: normal clamp(32px, 5vw, 53px)/1.15 Georgia, serif;
+  margin: 12px 0;
+}
+.heading p, .about p {
+  color: #c8bdca;
+  line-height: 1.8;
+}
 .services {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 .service {
@@ -92,22 +132,41 @@ h2 { font: normal clamp(32px, 5vw, 53px)/1.15 Georgia,serif; margin: 12px 0; }
   background: #302433;
 }
 .service img {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   min-height: 330px;
   object-fit: cover;
   position: absolute;
+  inset: 0;
   transition: transform .4s;
 }
 .service:hover img { transform: scale(1.06); }
 .service::after {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(transparent 20%,#17121cf5);
+  pointer-events: none;
 }
-.service-info { position: absolute; bottom: 0; z-index: 1; padding: 20px; }
-.service-info small { color: var(--gold); letter-spacing: 2px; }
-.service-info h3 { font: normal 25px Georgia,serif; margin: 9px 0; }
-.service-info p { font-size: 14px; line-height: 1.6; color: #e0d5e1; }
+.service-info {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  padding: 20px;
+}
+.service-info small {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.service-info h3 {
+  font: normal 25px Georgia, serif;
+  margin: 9px 0;
+}
+.service-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0d5e1;
+}
 .about {
   background: #f8eee4;
   color: #211720;
@@ -118,16 +177,23 @@ h2 { font: normal clamp(32px, 5vw, 53px)/1.15 Georgia,serif; margin: 12px 0; }
   gap: 50px;
   align-items: center;
 }
-.about img { width: 100%; min-height: 350px; object-fit: cover; }
+.about img {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+}
 .about p { color: #625662; line-height: 1.9; }
 .about h2 { margin-bottom: 20px; }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 .gallery img {
-  width: 100%; height: 240px; object-fit: cover;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: #302433;
 }
 .cta {
   text-align: center;
@@ -139,8 +205,43 @@ h2 { font: normal clamp(32px, 5vw, 53px)/1.15 Georgia,serif; margin: 12px 0; }
   grid-template-columns: 1fr 1fr;
   gap: 45px;
 }
-.contact-info p { color: #c8bdca; line-height: 1.9; }
-form { background: #241c28; padding: 25px; }
+.contact-info p {
+  color: #c8bdca;
+  line-height: 1.9;
+}
+.contact-info a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.contact-info a:hover { color: white; }
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.call-btn {
+  background: var(--gold);
+  color: #211720 !important;
+  text-decoration: none !important;
+}
+.whatsapp-btn {
+  background: var(--green);
+  color: #102416 !important;
+  text-decoration: none !important;
+}
+.whatsapp-btn:hover { background: #50e184; }
+form {
+  background: #241c28;
+  padding: 25px;
+  border: 1px solid #ffffff15;
+}
+label {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+}
 input, select, textarea {
   display: block;
   width: 100%;
@@ -150,6 +251,11 @@ input, select, textarea {
   color: white;
   border: 1px solid #514253;
   font: inherit;
+  border-radius: 3px;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
 }
 textarea { min-height: 100px; resize: vertical; }
 footer {
@@ -161,23 +267,35 @@ footer {
   flex-wrap: wrap;
   gap: 15px;
 }
-.whatsapp {
+.floating-whatsapp {
   position: fixed;
-  bottom: 20px; right: 20px;
-  background: #25d366;
+  bottom: 20px;
+  right: 20px;
+  background: var(--green);
   color: #102416;
   padding: 15px 18px;
   border-radius: 50px;
   font-weight: bold;
   z-index: 11;
+  box-shadow: 0 4px 18px #0005;
 }
-@media(max-width:900px) {
-  .services { grid-template-columns: repeat(2,1fr); }
+.floating-whatsapp:hover { background: #50e184; }
+
+@media(max-width: 1000px) {
+  .services { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
 }
-@media(max-width:600px) {
-  header { padding: 16px 5%; align-items: flex-start; }
-  nav { gap: 12px; justify-content: flex-end; font-size: 13px; }
+@media(max-width: 600px) {
+  header {
+    padding: 15px 5%;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  nav {
+    gap: 12px;
+    justify-content: flex-start;
+    font-size: 13px;
+  }
   .logo { font-size: 19px; }
   .hero { padding: 75px 6%; min-height: 570px; }
   section { padding: 65px 6%; }
@@ -185,16 +303,20 @@ footer {
   .service, .service img { min-height: 290px; }
   .service-info { padding: 13px; }
   .service-info h3 { font-size: 20px; }
+  .service-info p { font-size: 13px; }
   .gallery { grid-template-columns: 1fr 1fr; }
   .gallery img { height: 160px; }
+  .about img { min-height: 250px; }
+  form { padding: 18px; }
+  .floating-whatsapp { right: 12px; bottom: 12px; }
 }
 </style>
 </head>
-<body>
 
+<body>
 <header>
   <a href="#home" class="logo">GMC <span>EVENTS</span></a>
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
@@ -208,9 +330,11 @@ footer {
   <div class="hero-content">
     <div class="eyebrow">Decor • Lighting • Sound</div>
     <h1>Make Every<br>Moment <span>Grand.</span></h1>
-    <p>Beautiful flower decorations, elegant cloth draping,
-    magical lighting and energetic DJ sounds.
-    We make your special occasions unforgettable.</p>
+    <p>
+      Beautiful flower decorations, elegant cloth draping,
+      magical lighting and energetic DJ sounds.
+      We make your special occasions unforgettable.
+    </p>
     <div class="actions">
       <a class="btn" href="#contact">Plan Your Event ↗</a>
       <a class="btn-outline" href="#services">Explore Services</a>
@@ -222,35 +346,45 @@ footer {
   <div class="heading">
     <small>What We Do</small>
     <h2>Every celebration deserves something special.</h2>
-    <p>From wedding stages to lively parties, we help create
-    the perfect atmosphere for your memorable day.</p>
+    <p>
+      From wedding stages to lively parties, we help create
+      the perfect atmosphere for your memorable day.
+    </p>
   </div>
+
   <div class="services">
     <article class="service">
       <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80" alt="Flower decoration">
       <div class="service-info">
-        <small>01 / FLOWERS</small><h3>Flower Decoration</h3>
+        <small>01 / FLOWERS</small>
+        <h3>Flower Decoration</h3>
         <p>Floral stages, entrances and beautiful backdrops.</p>
       </div>
     </article>
+
     <article class="service">
       <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Event cloth decoration">
       <div class="service-info">
-        <small>02 / DRAPING</small><h3>Cloth Decoration</h3>
+        <small>02 / DRAPING</small>
+        <h3>Cloth Decoration</h3>
         <p>Elegant draping, canopies and stage styling.</p>
       </div>
     </article>
+
     <article class="service">
       <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Event lighting">
       <div class="service-info">
-        <small>03 / LIGHTS</small><h3>Event Lighting</h3>
+        <small>03 / LIGHTS</small>
+        <h3>Event Lighting</h3>
         <p>Warm ambience and colourful celebration lights.</p>
       </div>
     </article>
+
     <article class="service">
       <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80" alt="DJ sound system">
       <div class="service-info">
-        <small>04 / MUSIC</small><h3>DJ & Sound</h3>
+        <small>04 / MUSIC</small>
+        <h3>DJ &amp; Sound</h3>
         <p>Powerful sound and music for lively events.</p>
       </div>
     </article>
@@ -263,11 +397,15 @@ footer {
     <div>
       <small style="color:#9b7133;letter-spacing:3px">ABOUT GMC EVENTS</small>
       <h2>We create moments you will remember forever.</h2>
-      <p>Every event tells a story. Our goal is to bring your
-      vision to life with thoughtful decoration, beautiful
-      lighting and the right atmosphere.</p>
-      <p>Whether it is a wedding, engagement, birthday or
-      private celebration, we help make it feel special.</p>
+      <p>
+        Every event tells a story. Our goal is to bring your
+        vision to life with thoughtful decoration, beautiful
+        lighting and the right atmosphere.
+      </p>
+      <p>
+        Whether it is a wedding, engagement, birthday or
+        private celebration, we help make it feel special.
+      </p>
       <a class="btn" href="#contact">Let's Talk About Your Event</a>
     </div>
   </div>
@@ -277,16 +415,19 @@ footer {
   <div class="heading">
     <small>Our Inspiration</small>
     <h2>Set the scene. Feel the magic.</h2>
-    <p>Replace these sample photographs with pictures from
-    your own events and decorations.</p>
+    <p>
+      Replace these sample photographs with pictures from
+      your own events and decorations.
+    </p>
   </div>
+
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Wedding setup">
-    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80" alt="Floral decor">
-    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Reception decor">
-    <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=700&q=80" alt="Event venue">
-    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80" alt="DJ lights">
-    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Party lighting">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80" alt="Wedding setup" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=700&q=80" alt="Floral decor" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Reception decor" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=700&q=80" alt="Event venue" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80" alt="DJ lights" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Party lighting" loading="lazy">
   </div>
 </section>
 
@@ -294,8 +435,10 @@ footer {
   <div class="heading" style="margin:auto">
     <small>Your Special Day Starts Here</small>
     <h2>Let's make it unforgettable.</h2>
-    <p>Tell us what you are celebrating and we will help
-    you plan the right decorations, lighting and sound.</p>
+    <p>
+      Tell us what you are celebrating and we will help
+      you plan the right decorations, lighting and sound.
+    </p>
     <a class="btn" href="#contact">Get an Enquiry ↗</a>
   </div>
 </section>
@@ -305,37 +448,78 @@ footer {
     <div class="contact-info">
       <small style="color:var(--gold);letter-spacing:3px">GET IN TOUCH</small>
       <h2>Let's plan your event.</h2>
-      <p>Tell us about your occasion, preferred date and
-      the services you need.</p>
-      <p><strong>Phone:</strong> 9959002028</p>
-      <p><strong>WhatsApp:</strong> 9959002028</p>
+      <p>
+        Tell us about your occasion, preferred date and
+        the services you need.
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+919959002028">9959002028</a>
+      </p>
+      <p>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/919959002028"
+           target="_blank" rel="noopener noreferrer">9959002028</a>
+      </p>
       <p><strong>Location:</strong> Kothagudem Village 534411</p>
-      <p><strong>Services:</strong> Flower décor, cloth décor,
-      lighting, DJ and sound.</p>
+      <p>
+        <strong>Services:</strong> Flower décor, cloth décor,
+        lighting, DJ and sound.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn call-btn" href="tel:+919959002028">
+          ☎ Call Now
+        </a>
+        <a class="btn whatsapp-btn"
+           href="https://wa.me/919959002028?text=Hello%20GMC%20EVENTS,%20I%20need%20event%20services."
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp Us ↗
+        </a>
+      </div>
     </div>
+
     <form id="enquiryForm">
       <h3>Event Enquiry</h3>
+
       <label for="name">Your name</label>
-      <input id="name" name="name" placeholder="Enter your name" required>
+      <input id="name" name="name" autocomplete="name"
+             placeholder="Enter your name" required>
+
       <label for="phone">Phone number</label>
-      <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+      <input id="phone" name="phone" type="tel"
+             autocomplete="tel" placeholder="Your phone number" required>
+
       <label for="event">Event type</label>
       <select id="event" name="event" required>
         <option value="">Choose an event</option>
-        <option>Wedding</option><option>Engagement</option>
-        <option>Birthday</option><option>Private party</option>
+        <option>Wedding</option>
+        <option>Engagement</option>
+        <option>Birthday</option>
+        <option>Private party</option>
         <option>Other</option>
       </select>
+
       <label for="service">Service required</label>
-      <select id="service" name="service">
-        <option>Flower decoration</option>
-        <option>Cloth decoration</option><option>Lighting</option>
-        <option>DJ and sound</option><option>Complete package</option>
+      <select id="service" name="service" required>
+        <option value="Flower decoration">Flower decoration</option>
+        <option value="Cloth decoration">Cloth decoration</option>
+        <option value="Lighting">Lighting</option>
+        <option value="DJ and sound">DJ and sound</option>
+        <option value="Complete package">Complete package</option>
       </select>
+
       <label for="details">Event details</label>
-      <textarea id="details" name="details" placeholder="Date, venue, budget or other details"></textarea>
-      <button class="btn" type="submit" style="width:100%">Send Enquiry on WhatsApp</button>
-      <p style="font-size:12px;color:#bdb0c0">Add your WhatsApp number in the code before using this form.</p>
+      <textarea id="details" name="details"
+        placeholder="Event date, venue, budget or other details"></textarea>
+
+      <button class="btn" type="submit" style="width:100%">
+        Send Enquiry on WhatsApp ↗
+      </button>
+      <p style="font-size:12px;color:#bdb0c0">
+        Your enquiry will open in WhatsApp so you can review and send it.
+      </p>
     </form>
   </div>
 </section>
@@ -343,47 +527,41 @@ footer {
 
 <footer>
   <strong>GMC EVENTS</strong>
-  <span>Flower Décor • Cloth Décor • Lighting • DJ & Sound</span>
+  <span>Flower Décor • Cloth Décor • Lighting • DJ &amp; Sound</span>
   <span>© <span id="year"></span> GMC EVENTS</span>
 </footer>
 
-<a class="whatsapp" id="whatsappLink" href="#contact">WhatsApp ↗</a>
+<a class="floating-whatsapp"
+   href="https://wa.me/919959002028?text=Hello%20GMC%20EVENTS,%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="Chat with GMC EVENTS on WhatsApp">
+  WhatsApp ↗
+</a>
 
 <script>
-// IMPORTANT: Replace this with your WhatsApp number including country code.
-// Example India number: 919876543210 (no +, spaces or dashes).
 const GMC_WHATSAPP_NUMBER = "919959002028";
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("whatsappLink").addEventListener("click", function(e) {
-  if (GMC_WHATSAPP_NUMBER.includes("X")) {
-    e.preventDefault();
-    alert("Please add your WhatsApp number in the website code first.");
-  } else {
-    this.href = "https://wa.me/" + GMC_WHATSAPP_NUMBER;
-    this.target = "_blank";
-  }
-});
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  if (GMC_WHATSAPP_NUMBER.includes("X")) {
-    alert("Please add your WhatsApp number in the code before using the form.");
-    return;
-  }
-  const d = new FormData(this);
+
+  const form = new FormData(this);
+
   const message =
-    "Hello GMC EVENTS! I would like to enquire about an event.\n" +
-    "Name: " + d.get("name") + "\n" +
-    "Phone: " + d.get("phone") + "\n" +
-    "Event: " + d.get("event") + "\n" +
-    "Service: " + d.get("service") + "\n" +
-    "Details: " + (d.get("details") || "Not provided");
-  window.open(
-    "https://wa.me/" + GMC_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message),
-    "_blank"
-  );
+    "Hello GMC EVENTS! I would like to enquire about an event.\n\n" +
+    "Name: " + form.get("name") + "\n" +
+    "Phone: " + form.get("phone") + "\n" +
+    "Event: " + form.get("event") + "\n" +
+    "Service: " + form.get("service") + "\n" +
+    "Details: " + (form.get("details") || "Not provided");
+
+  const whatsappURL =
+    "https://wa.me/" + GMC_WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank", "noopener,noreferrer");
 });
 </script>
 </body>
